@@ -1,0 +1,12 @@
+public int distance (Student other) {
+  if (this.getStreet().equals(other.getStreet())) {
+    int dist = this.getNumber() - other.getNumber();
+    if (dist < 0) {
+      dist *= -1;
+    }
+  }
+  else {
+    int dist = 99999;
+  }
+  return dist;
+}

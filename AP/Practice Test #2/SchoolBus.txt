@@ -1,0 +1,9 @@
+public class SchoolBus() extends ArrayList<Student> {
+  private int numSeats;
+  public void SchoolBus(int seats){
+    numSeats = seats;
+  }
+  public boolean isFull() {
+    return size() == numSeats;
+  }
+}

@@ -1,0 +1,13 @@
+public static void removeOutliers(List<Movie> movies) {
+  double[] coefficients = getFitCoefficients(movies);
+  double total = 0.0;
+  for (double c : coefficients) {
+    sum += c;
+  }
+  double threshold = (sum / coefficients.length()) / 2;
+  for (int i = coefficients.length() - 1; i >= 0; i--) {
+    if (coefficients[k] < threshold) {
+      movies.remove(k);
+    }
+  }
+}

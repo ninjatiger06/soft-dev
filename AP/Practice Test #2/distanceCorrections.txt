@@ -1,0 +1,8 @@
+public int distance (Student other) {
+  if (getStreet().equals(other.getStreet())) {
+    return Math.abs(getNumber() - other.getNumber());
+  }
+  else {
+    return 99999;
+  }
+}

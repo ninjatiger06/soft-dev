@@ -1,0 +1,16 @@
+public int findRemotestCity() {
+  int furthestTotal = 0;
+  int cityIndex = -1;
+
+  for (int i = 0; i < distances.length(); i++) {
+    int totalDist = 0;
+    for (int j = 0; j < distances.length(); j++) {
+      totalDist += distances[i][j];
+    }
+    if (totalDist > furthestTotal) {
+      furthestTotal = totalDist;
+      cityIndex = i;
+    }
+  }
+  return cityIndex;
+}

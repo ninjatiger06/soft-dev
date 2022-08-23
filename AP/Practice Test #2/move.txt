@@ -1,0 +1,11 @@
+public boolean move(int k) {
+  for (int i = board[k]; i > 0; i--) {
+    k++;
+  }
+  if (k == store1 || k == store2) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}

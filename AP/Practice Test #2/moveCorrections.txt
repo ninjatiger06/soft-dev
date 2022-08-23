@@ -1,0 +1,25 @@
+public boolean move(int k) {
+  int myStore, opponentsStore;
+  if (k < store1) {
+    myStore = store1;
+    opponentsStore = store2;
+  }
+  else {
+  myStore = store2;
+  oppenentsStore = store1;
+  }
+
+  int seeds = board[k];
+  board[k] = 0;
+  while (seeds > 0) {
+    k++;
+    if (k >= BOARD_SIZE) {
+      k = 0;
+    }
+    if (k != oppenentsStore) {
+      board[k]++;
+      seeds--;
+    }
+  }
+  return k == myStore;
+}

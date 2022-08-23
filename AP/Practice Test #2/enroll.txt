@@ -1,0 +1,22 @@
+public boolean enroll(Student student) {
+int minDistance = 99999;
+SchoolBus bestBus = null;
+  for (SchoolBus bus : buses) {
+    if (!bus.isFull()) {
+      for (int k = 0; k < bus.size(); k++) {
+        int d = student.distance(bus.get(k));
+        if (d < minDistance) {
+          minDistance = d;
+          bestBus = bus;
+        }
+      }
+    }
+  }
+  if (bestBus != null) {
+    bestBus.add(student);
+    return true;
+  }
+  else {
+    return false;
+  }
+}
